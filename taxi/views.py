@@ -16,7 +16,6 @@ def index(request):
     num_cars = Car.objects.count()
     num_manufacturers = Manufacturer.objects.count()
     num_visits = request.session.get("num_visits", 0)
-    #no it does not do this our counter starts from 1 in all times
     request.session["num_visits"] = num_visits + 1
 
     context = {
